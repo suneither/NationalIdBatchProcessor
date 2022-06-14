@@ -5,11 +5,11 @@ import org.kohsuke.args4j.Option;
 public class InputOptions {
 
     @Option(name = "-i", aliases = "--input", required = true, usage = "Sets a file: full path")
-    public String path;
+    public static String path;
 
     @Option(name = "-f", aliases = "--filter", usage = "Sets a filter: male|female")
-    public String filter;
+    public static String filter;
 
     @Option(name = "-sbd", aliases = "--sort-by-birth-date", usage = "Sets a sort type: asc|desc")
-    public String sortType;
+    public static String sortType;
 }
