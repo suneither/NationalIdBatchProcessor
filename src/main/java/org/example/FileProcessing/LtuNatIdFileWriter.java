@@ -12,7 +12,7 @@ public class LtuNatIdFileWriter {
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(filePath));
             for(LtuNatIdModel id : ids){
-                bw.write("National id: " + id.getId() + " is a " + id.getGender() + " born in " + id.getBirthDate());
+                bw.write( id.getId() + " " + id.isValid());
                 bw.newLine();
             }
 

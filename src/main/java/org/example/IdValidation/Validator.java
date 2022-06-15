@@ -16,7 +16,7 @@ public class Validator {
     private List<LtuNatIdModel> validIds = Collections.synchronizedList(new ArrayList<>());
     private List<LtuNatIdModel> invalidIds = Collections.synchronizedList(new ArrayList<>());
     private int idsCount;
-    private int badFormatCount = 0;
+    private int badFormatIdsCount = 0;
 
     public Validator(List<String> ids){
         unvalidatedIds = ids;
@@ -60,7 +60,7 @@ public class Validator {
                 invalidIds.add(litNatIdVal.getLtuNatIdModel());
             }
         }catch (NumberFormatException e){
-            badFormatCount++;
+            badFormatIdsCount++;
         }
     }
 
@@ -76,7 +76,7 @@ public class Validator {
         return idsCount;
     }
 
-    public int getBadFormatCount() { return badFormatCount; }
+    public int getBadFormatIdsCount() { return badFormatIdsCount; }
 
     private class LitNatIdValidationTask implements Runnable {
         public String id;

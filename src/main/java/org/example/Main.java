@@ -58,6 +58,6 @@ public class Main {
 
         System.out.println("Valid id's: " + validIds.size() + " out of " + idValidator.getIdsCount());
         System.out.println("Invalid id's: " + invalidIds.size() + " out of " + idValidator.getIdsCount());
-        System.out.println("Invalid given format: " + idValidator.getBadFormatCount() + " out of " + idValidator.getIdsCount());
+        System.out.println("Invalid given format: " + idValidator.getBadFormatIdsCount() + " out of " + idValidator.getIdsCount());
     }
 }
